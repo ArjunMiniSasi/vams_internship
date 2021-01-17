@@ -1,0 +1,77 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter --quiet assemble --depfile C:\Users\ajayn\Documents\vams_internship\vams_internship\build\app\intermediates\flutter\debug/flutter_build.d --output C:\Users\ajayn\Documents\vams_internship\vams_internship\build\app\intermediates\flutter\debug -dTargetFile=C:\Users\ajayn\Documents\vams_internship\vams_internship\lib\main.dart -dTargetPlatform=android -dBuildMode=debug -dTrackWidgetCreation=true debug_android_application
+
+## exception
+
+FileSystemException: FileSystemException: Cannot open file, path = 'C:\Users\ajayn\Documents\vams_internship\vams_internship\.dart_tool\flutter_build\2e2b9031365d029b5ec5c63a8312dea5\outputs.json' (OS Error: The requested operation cannot be performed on a file with a user-mapped section open.
+, errno = 1224)
+
+```
+#0      _File.throwIfError (dart:io/file_impl.dart:635:7)
+#1      _File.openSync (dart:io/file_impl.dart:479:5)
+#2      _File.writeAsBytesSync (dart:io/file_impl.dart:604:31)
+#3      _File.writeAsStringSync (dart:io/file_impl.dart:628:5)
+#4      ForwardingFile.writeAsStringSync (package:file/src/forwarding/forwarding_file.dart:148:16)
+#5      FlutterBuildSystem.build (package:flutter_tools/src/build_system/build_system.dart:594:8)
+#6      _rootRunUnary (dart:async/zone.dart:1198:47)
+#7      _CustomZone.runUnary (dart:async/zone.dart:1100:19)
+#8      _FutureListener.handleValue (dart:async/future_impl.dart:143:18)
+#9      Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:696:45)
+#10     Future._propagateToListeners (dart:async/future_impl.dart:725:32)
+#11     Future._completeWithValue (dart:async/future_impl.dart:529:5)
+#12     _AsyncAwaitCompleter.complete (dart:async-patch/async_patch.dart:40:15)
+#13     _completeOnAsyncReturn (dart:async-patch/async_patch.dart:311:13)
+#14     _BuildInstance._invokeInternal (package:flutter_tools/src/build_system/build_system.dart)
+#15     _asyncErrorWrapperHelper.errorCallback (dart:async-patch/async_patch.dart:91:64)
+#16     _rootRunBinary (dart:async/zone.dart:1214:47)
+#17     _CustomZone.runBinary (dart:async/zone.dart:1107:19)
+#18     _FutureListener.handleError (dart:async/future_impl.dart:157:20)
+#19     Future._propagateToListeners.handleError (dart:async/future_impl.dart:708:47)
+#20     Future._propagateToListeners (dart:async/future_impl.dart:729:24)
+#21     Future._completeError (dart:async/future_impl.dart:537:5)
+#22     Future._asyncCompleteError.<anonymous closure> (dart:async/future_impl.dart:593:7)
+#23     _rootRun (dart:async/zone.dart:1190:13)
+#24     _CustomZone.run (dart:async/zone.dart:1093:19)
+#25     _CustomZone.runGuarded (dart:async/zone.dart:997:7)
+#26     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1037:23)
+#27     _microtaskLoop (dart:async/schedule_microtask.dart:41:21)
+#28     _startMicrotaskLoop (dart:async/schedule_microtask.dart:50:5)
+#29     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
+#30     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:169:5)
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 1.22.5, on Microsoft Windows [Version 10.0.19042.685], locale en-US)
+    • Flutter version 1.22.5 at C:\Users\ajayn\Documents\flutter_windows_1.17.5-stable\flutter
+    • Framework revision 7891006299 (5 weeks ago), 2020-12-10 11:54:40 -0800
+    • Engine revision ae90085a84
+    • Dart version 2.10.4
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 30.0.2)
+    • Android SDK at C:\Users\ajayn\AppData\Local\Android\sdk
+    • Platform android-30, build-tools 30.0.2
+    • Java binary at: C:\Program Files\Android\Android Studio\jre\bin\java
+    • Java version OpenJDK Runtime Environment (build 1.8.0_242-release-1644-b01)
+    • All Android licenses accepted.
+
+[!] Android Studio (version 4.1.0)
+    • Android Studio at C:\Program Files\Android\Android Studio
+    ✗ Flutter plugin not installed; this adds Flutter specific functionality.
+    ✗ Dart plugin not installed; this adds Dart specific functionality.
+    • Java version OpenJDK Runtime Environment (build 1.8.0_242-release-1644-b01)
+
+[✓] VS Code (version 1.52.1)
+    • VS Code at C:\Users\ajayn\AppData\Local\Programs\Microsoft VS Code
+    • Flutter extension version 3.18.1
+
+[✓] Connected device (1 available)
+    • SM M405F (mobile) • RZ8M60ZA28V • android-arm64 • Android 10 (API 29)
+
+! Doctor found issues in 1 category.
+```

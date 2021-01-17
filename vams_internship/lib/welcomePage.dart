@@ -81,7 +81,7 @@ class _WelcomePageState extends State<WelcomePage> {
           shape: BoxShape.circle,
           image: DecorationImage(
               // image: AssetImage("assets/logo1.gif"),
-               image: NetworkImage('https://i.pinimg.com/originals/78/d8/bc/78d8bcedeea91115b4d8352793cc3db5.gif'),
+               image: AssetImage('assets/images/logo1.gif'),
               fit: BoxFit.fill),
         ),
       ),

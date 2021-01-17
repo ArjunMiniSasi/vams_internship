@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+// import 'package:vams_internship/ec/main1.dart';
 // import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 // import 'package:dio/dio.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+import '../login.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -8,15 +12,66 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  _makingPhoneCall() async {
+    const url = 'tel:9100210026';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     var scaffoldKey;
     return Scaffold(
       key: scaffoldKey,
+      bottomNavigationBar: Container(
+        height: 90,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            FlatButton(
+              onPressed: () => {_makingPhoneCall()},
+              shape: new RoundedRectangleBorder(
+                  borderRadius: new BorderRadius.circular(10.0)),
+              color: Colors.red,
+              padding: EdgeInsets.fromLTRB(10, 10, 30, 10),
+              child: Row(
+                // Replace with a Row for horizontal icon + text
+                mainAxisSize: MainAxisSize.min,
+
+                children: <Widget>[
+                  Icon(
+                    Icons.star_border,
+                    size: 40.0,
+                  ),
+                  Text("Dail for emargency")
+                ],
+              ),
+            ),
+            FlatButton(
+              shape: new RoundedRectangleBorder(
+                  borderRadius: new BorderRadius.circular(10.0)),
+              onPressed: () => {},
+              color: Colors.blueAccent,
+              padding: EdgeInsets.fromLTRB(40, 10, 40, 10),
+              child: Row(
+                // Replace with a Row for horizontal icon + text
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  Icon(Icons.add, size: 40.0),
+                  Text("Book Vet"),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
       appBar: AppBar(
         backgroundColor: Colors.lightBlue,
         title: const Text(
-          '                VAMS',
+          '             VAMS',
           textAlign: TextAlign.center,
           style: TextStyle(fontSize: 25, color: Colors.white),
         ),
@@ -27,7 +82,7 @@ class _HomePageState extends State<HomePage> {
               color: Colors.white,
             ),
             iconSize: 40,
-            tooltip: 'Show Snackbar', onPressed: () {  },
+            tooltip: 'Show Snackbar', onPressed: () {},
 
             // onPressed: () {
             //   scaffoldKey.currentState.showSnackBar(snackBar);
@@ -46,10 +101,10 @@ class _HomePageState extends State<HomePage> {
         scrollDirection: Axis.vertical,
         children: <Widget>[
           Container(
-            margin: EdgeInsets.only(left: 20, top: 10, right: 20, bottom: 0),
+            margin: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 0),
             //  color: Colors.blueAccent,
-            width: 48.0,
-            height: 206.0,
+            // width: 48.0,
+            // height: 240.0,
             decoration: new BoxDecoration(
               color: Colors.blue,
               borderRadius: new BorderRadius.only(
@@ -100,10 +155,10 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           Container(
-            margin: EdgeInsets.only(left: 20, top: 10, right: 20, bottom: 0),
+            margin: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 0),
             // color: Color(0xffF3C50E),
-            width: 48.0,
-            height: 200.0,
+            // width: 48.0,
+            // height: 210.0,
             decoration: new BoxDecoration(
               color: Color(0xffF3C50E),
               // color: Colors.blue,
@@ -140,7 +195,8 @@ class _HomePageState extends State<HomePage> {
                         Icons.arrow_forward_ios,
                         color: Colors.white,
                       ),
-                      iconSize: 40, onPressed: () {  },
+                      iconSize: 40,
+                      onPressed: () {},
                     ),
                     alignment: Alignment.bottomRight,
                   )
@@ -149,10 +205,10 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           Container(
-            margin: EdgeInsets.only(left: 20, top: 10, right: 20, bottom: 0),
+            margin: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 0),
             // color: Color(0xff15D319),
-            width: 48.0,
-            height: 230.0,
+            // width: 48.0,
+            // height: 240.0,
             decoration: new BoxDecoration(
               //  color: Color(0xffF3C50E),
               // color: Colors.blue,
@@ -191,7 +247,8 @@ class _HomePageState extends State<HomePage> {
                         Icons.arrow_forward_ios,
                         color: Colors.white,
                       ),
-                      iconSize: 40, onPressed: () {  },
+                      iconSize: 40,
+                      onPressed: () {},
                     ),
                     alignment: Alignment.bottomRight,
                   )
@@ -200,10 +257,10 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           Container(
-            margin: EdgeInsets.only(left: 20, top: 10, right: 20, bottom: 0),
+            margin: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 0),
             // color: Color(0xffD35400),
-            width: 48.0,
-            height: 208.0,
+            // width: 48.0,
+            // height: 208.0,
             decoration: new BoxDecoration(
               //  color: Color(0xffF3C50E),
               // color: Colors.blue,
@@ -266,12 +323,17 @@ class _HomePageState extends State<HomePage> {
                     //   ),
                     // )
                     child: IconButton(
-                      icon: new Icon(
-                        Icons.arrow_forward_ios,
-                        color: Colors.white,
-                      ),
-                      iconSize: 40, onPressed: () {  },
-                    ),
+                        icon: new Icon(
+                          Icons.arrow_forward_ios,
+                          color: Colors.white,
+                        ),
+                        iconSize: 40,
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => LoginPage()),
+                          );
+                        }),
                     // alignment: Alignment.bottomRight,
                   )
                 ],
@@ -279,8 +341,27 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           SizedBox(
-            height: 70,
+            height: 10,
           ),
+          // new Container(
+          //   child: new Row(
+          //     children: <Widget>[
+          //       new RaisedButton(
+          //         child: new Text("Dail for emergency"),
+          //         color: Colors.blueAccent[600],
+          //         onPressed: null,
+          //       ),
+          //       SizedBox(
+          //   height: 10,
+          // ),
+          //       new RaisedButton(
+          //         child: new Text("              Book vet              "),
+          //         color: Colors.blueAccent[600],
+          //         onPressed: null,
+          //       ),
+          //     ],
+          //   ),
+          // ),
         ],
       ),
     );

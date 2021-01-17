@@ -1,4 +1,13 @@
+<<<<<<< HEAD
 #Mon Jan 11 14:47:24 IST 2021
 base.0=/Users/vams/AndroidStudioProjects/vams_internship/vams_internship/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+=======
+<<<<<<< Updated upstream
+#Fri Jan 15 10:46:56 IST 2021
+=======
+#Fri Jan 15 08:47:07 IST 2021
+>>>>>>> Stashed changes
+base.0=C\:\\Users\\ajayn\\Documents\\vams_internship\\vams_internship\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+>>>>>>> e58f015e1cf62bec543d1b0bed0145691e65d7e9
 path.0=classes.dex
 renamed.0=classes.dex
