@@ -33,6 +33,7 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "merged": "/Users/vams/AndroidStudioProjects/vams_internship/vams_internship/build/app/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat",
         "source": "/Users/vams/AndroidStudioProjects/vams_internship/vams_internship/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
     },
@@ -48,20 +49,14 @@
         "source": "C:\\Users\\ajayn\\Documents\\vams_internship\\vams_internship\\android\\app\\src\\main\\res\\mipmap-xhdpi\\launcher_icon.png"
     },
     {
+=======
+>>>>>>> 7e4a6bb0211687d17c0c71614e3e252599f3b162
         "merged": "C:\\Users\\ajayn\\Documents\\vams_internship\\vams_internship\\build\\app\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notify_panel_notification_icon_bg.png.flat",
         "source": "C:\\Users\\ajayn\\.gradle\\caches\\transforms-2\\files-2.1\\a528b13ac93e64cafa3d0480e2c93207\\core-1.1.0\\res\\drawable-hdpi-v4\\notify_panel_notification_icon_bg.png"
     },
     {
-        "merged": "C:\\Users\\ajayn\\Documents\\vams_internship\\vams_internship\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-mdpi_launcher_icon.png.flat",
-        "source": "C:\\Users\\ajayn\\Documents\\vams_internship\\vams_internship\\android\\app\\src\\main\\res\\mipmap-mdpi\\launcher_icon.png"
-    },
-    {
         "merged": "C:\\Users\\ajayn\\Documents\\vams_internship\\vams_internship\\build\\app\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
         "source": "C:\\Users\\ajayn\\.gradle\\caches\\transforms-2\\files-2.1\\a528b13ac93e64cafa3d0480e2c93207\\core-1.1.0\\res\\drawable-mdpi-v4\\notification_bg_normal_pressed.9.png"
-    },
-    {
-        "merged": "C:\\Users\\ajayn\\Documents\\vams_internship\\vams_internship\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_launcher_icon.png.flat",
-        "source": "C:\\Users\\ajayn\\Documents\\vams_internship\\vams_internship\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\launcher_icon.png"
     },
     {
         "merged": "C:\\Users\\ajayn\\Documents\\vams_internship\\vams_internship\\build\\app\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notify_panel_notification_icon_bg.png.flat",
@@ -86,6 +81,7 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "merged": "/Users/vams/AndroidStudioProjects/vams_internship/vams_internship/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_low_pressed.9.png.flat",
         "source": "/Users/vams/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/res/drawable-hdpi-v4/notification_bg_low_pressed.9.png"
 =======
@@ -93,6 +89,8 @@
         "source": "C:\\Users\\ajayn\\Documents\\vams_internship\\vams_internship\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\launcher_icon.png"
     },
     {
+=======
+>>>>>>> 7e4a6bb0211687d17c0c71614e3e252599f3b162
         "merged": "C:\\Users\\ajayn\\Documents\\vams_internship\\vams_internship\\build\\app\\intermediates\\res\\merged\\debug\\layout_notification_template_part_chronometer.xml.flat",
         "source": "C:\\Users\\ajayn\\.gradle\\caches\\transforms-2\\files-2.1\\a528b13ac93e64cafa3d0480e2c93207\\core-1.1.0\\res\\layout\\notification_template_part_chronometer.xml"
 >>>>>>> e58f015e1cf62bec543d1b0bed0145691e65d7e9
@@ -179,6 +177,7 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "merged": "/Users/vams/AndroidStudioProjects/vams_internship/vams_internship/build/app/intermediates/res/merged/debug/layout_custom_dialog.xml.flat",
         "source": "/Users/vams/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/res/layout/custom_dialog.xml"
 =======
@@ -186,6 +185,8 @@
         "source": "C:\\Users\\ajayn\\Documents\\vams_internship\\vams_internship\\android\\app\\src\\main\\res\\mipmap-hdpi\\launcher_icon.png"
     },
     {
+=======
+>>>>>>> 7e4a6bb0211687d17c0c71614e3e252599f3b162
         "merged": "C:\\Users\\ajayn\\Documents\\vams_internship\\vams_internship\\build\\app\\intermediates\\res\\merged\\debug\\layout-v21_notification_action_tombstone.xml.flat",
         "source": "C:\\Users\\ajayn\\.gradle\\caches\\transforms-2\\files-2.1\\a528b13ac93e64cafa3d0480e2c93207\\core-1.1.0\\res\\layout-v21\\notification_action_tombstone.xml"
 >>>>>>> e58f015e1cf62bec543d1b0bed0145691e65d7e9

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 // import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 // import 'package:dio/dio.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:vams_internship/ec1/pages/home_page.dart';
 
 import '../login.dart';
 
@@ -331,7 +332,7 @@ class _HomePageState extends State<HomePage> {
                         onPressed: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => LoginPage()),
+                            MaterialPageRoute(builder: (context) => HomePage1()),
                           );
                         }),
                     // alignment: Alignment.bottomRight,
