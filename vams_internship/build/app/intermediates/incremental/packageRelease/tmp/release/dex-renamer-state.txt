@@ -1,9 +1,0 @@
-<<<<<<< HEAD
-#Mon Jan 11 14:52:22 IST 2021
-base.0=/Users/vams/AndroidStudioProjects/vams_internship/vams_internship/build/app/intermediates/transforms/r8/release/0/classes.dex
-=======
-#Wed Jan 13 00:35:52 IST 2021
-base.0=C\:\\Users\\ajayn\\Documents\\vams_internship\\vams_internship\\build\\app\\intermediates\\transforms\\r8\\release\\0\\classes.dex
->>>>>>> e58f015e1cf62bec543d1b0bed0145691e65d7e9
-path.0=classes.dex
-renamed.0=classes.dex

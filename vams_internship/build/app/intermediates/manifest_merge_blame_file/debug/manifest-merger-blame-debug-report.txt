@@ -28,13 +28,8 @@
 24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 24-->[androidx.core:core:1.1.0] /Users/vams/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/AndroidManifest.xml:24:18-86
 25        android:debuggable="true"
-<<<<<<< HEAD
 26        android:icon="@mipmap/ic_launcher"
 26-->/Users/vams/AndroidStudioProjects/vams_internship/vams_internship/android/app/src/main/AndroidManifest.xml:11:9-43
-=======
-26        android:icon="@mipmap/launcher_icon"
-26-->C:\Users\ajayn\Documents\vams_internship\vams_internship\android\app\src\main\AndroidManifest.xml:11:9-45
->>>>>>> e58f015e1cf62bec543d1b0bed0145691e65d7e9
 27        android:label="vams_internship" >
 27-->/Users/vams/AndroidStudioProjects/vams_internship/vams_internship/android/app/src/main/AndroidManifest.xml:10:9-40
 28        <activity
@@ -98,23 +93,16 @@
 67            android:name="flutterEmbedding"
 67-->/Users/vams/AndroidStudioProjects/vams_internship/vams_internship/android/app/src/main/AndroidManifest.xml:44:13-44
 68            android:value="2" />
-<<<<<<< HEAD
 68-->/Users/vams/AndroidStudioProjects/vams_internship/vams_internship/android/app/src/main/AndroidManifest.xml:45:13-30
-69    </application>
-70
-71</manifest>
-=======
-68-->C:\Users\ajayn\Documents\vams_internship\vams_internship\android\app\src\main\AndroidManifest.xml:45:13-30
 69
 70        <activity
-70-->[:url_launcher] C:\Users\ajayn\Documents\vams_internship\vams_internship\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-11:74
+70-->[:url_launcher] /Users/vams/AndroidStudioProjects/vams_internship/vams_internship/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-11:74
 71            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
-71-->[:url_launcher] C:\Users\ajayn\Documents\vams_internship\vams_internship\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-74
+71-->[:url_launcher] /Users/vams/AndroidStudioProjects/vams_internship/vams_internship/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-74
 72            android:exported="false"
-72-->[:url_launcher] C:\Users\ajayn\Documents\vams_internship\vams_internship\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:10:13-37
+72-->[:url_launcher] /Users/vams/AndroidStudioProjects/vams_internship/vams_internship/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:10:13-37
 73            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-73-->[:url_launcher] C:\Users\ajayn\Documents\vams_internship\vams_internship\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-71
+73-->[:url_launcher] /Users/vams/AndroidStudioProjects/vams_internship/vams_internship/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:11:13-71
 74    </application>
 75
 76</manifest>
->>>>>>> e58f015e1cf62bec543d1b0bed0145691e65d7e9
