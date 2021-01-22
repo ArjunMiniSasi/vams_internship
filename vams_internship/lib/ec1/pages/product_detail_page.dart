@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vams_internship/ec1/theme/colors.dart';
-// import 'package:vams_internship/login.dart';
+import 'package:vams_internship/login.dart';
 import 'package:vams_internship/scroling/dail.dart';
 
 class ProductDetailPage extends StatefulWidget {
@@ -52,43 +52,50 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
   }
 
   Widget getBottom() {
-    // var size = MediaQuery.of(context).size;
-    return Container(
-      height: 50.0,
-      child: GestureDetector(
-        onTap: () {
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => Dail()));
-        },
-        child: Container(
-          decoration: BoxDecoration(
-            border: Border.all(
-              color: Color(0xFFF05A22),
-              style: BorderStyle.solid,
-              width: 1.0,
+    //  var size = MediaQuery.of(context).size;
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        FlatButton(
+          onPressed: () => {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Dail()),
             ),
-            color: Colors.transparent,
-            borderRadius: BorderRadius.circular(60.0),
-          ),
+          },
+          shape: new RoundedRectangleBorder(
+              borderRadius: new BorderRadius.circular(40.0)),
+          color: Colors.deepOrange,
+          padding: EdgeInsets.fromLTRB(10, 10, 30, 10),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            // Replace with a Row for horizontal icon + text
+            mainAxisSize: MainAxisSize.min,
+
             children: <Widget>[
-              Center(
-                child: Text(
-                  "ADD TO CART",
-                  style: TextStyle(
-                    color: Color(0xFFF05A22),
-                    fontFamily: 'Montserrat',
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
-                    letterSpacing: 1,
-                  ),
-                ),
-              )
+              Icon(
+                Icons.call,
+                size: 40.0,
+              ),
+              Text("call to client")
             ],
           ),
         ),
-      ),
+        FlatButton(
+          shape: new RoundedRectangleBorder(
+              borderRadius: new BorderRadius.circular(40.0)),
+          onPressed: () => {},
+          color: Colors.green,
+          padding: EdgeInsets.fromLTRB(10, 10, 40, 10),
+          child: Row(
+            // Replace with a Row for horizontal icon + text
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              Icon(Icons.mail, size: 40.0),
+              Text("mail to client"),
+            ],
+          ),
+        ),
+      ],
     );
   }
 
@@ -177,13 +184,13 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                   image: NetworkImage(
                                       widget.color[index]['value']),
                                   fit: BoxFit.cover),
-                              border: Border.all(
-                                width: 2,
-                                color: activeColor == widget.color[index]['id']
-                                    ? primary
-                                    : Colors.transparent,
-                              ),
-                              borderRadius: BorderRadius.circular(30)),
+                              // border: Border.all(
+                              //   width: 0,
+                              //   color: activeColor == widget.color[index]['id']
+                              //       ? primary
+                              //       : Colors.transparent,
+                              // ),
+                              borderRadius: BorderRadius.circular(20)),
                         ),
                       ),
                     );
@@ -193,6 +200,47 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
             ),
             SizedBox(
               height: 20,
+            ),
+
+            SizedBox(
+              height: 20,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 120, right: 10),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  // Text(
+                  //   "",
+                  //   style: TextStyle(fontSize: 16, height: 1.5),
+                  // ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Flexible(
+                    child: Text(
+                      widget.name,
+                      textAlign: TextAlign.end,
+                      style: TextStyle(
+                        fontSize: 36,
+                        height: 1.5,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 40, right: 25),
+              child: Container(
+                child: Text(
+                  widget.discription,
+                  style: TextStyle(fontSize: 16, height: 1.5),
+                ),
+              ),
             ),
             Padding(
               padding: const EdgeInsets.only(left: 40, right: 20),
@@ -234,52 +282,12 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
               height: 20,
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 120, right: 10),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  Text(
-                    "",
-                    style: TextStyle(fontSize: 16, height: 1.5),
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Flexible(
-                    child: Text(
-                      widget.name,
-                      textAlign: TextAlign.center,
-                    
-                      style: TextStyle(fontSize: 36, height: 1.5,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 40, right: 20),
-              child: Container(
-                child: Text(
-                  widget.discription,
-                  style: TextStyle(fontSize: 16, height: 1.5),
-                ),
-              ),
-            ),
-
-            SizedBox(
-              height: 20,
-            ),
-            Padding(
               padding: const EdgeInsets.only(left: 20, right: 20),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
-                    "Code :",
+                    "C.ID :",
                     style: TextStyle(fontSize: 16, height: 1.5),
                   ),
                   SizedBox(
@@ -298,6 +306,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
             SizedBox(
               height: 20,
             ),
+
             // Padding(
             //   padding: const EdgeInsets.only(left: 20, right: 20),
             //   child: Row(
