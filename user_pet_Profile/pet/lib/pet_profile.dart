@@ -18,151 +18,154 @@ class _PetDetailScreenState extends State<PetDetailScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Color(0xffFAFAFA),
         appBar: AppBar(
-          title: Row(
-            children: [
-              Icon(
-                Icons.arrow_back_ios,
-                color: Colors.white,
-              ),
-              Text(
-                'Back',
-                style: TextStyle(color: Colors.white, fontSize: 17),
-              ),
-              SizedBox(
-                width: MediaQuery.of(context).size.width * 0.5,
-                child: Center(
-                  child: CircleAvatar(
-                    radius: 22,
-                    backgroundColor: Colors.white,
-                    child: CircleAvatar(
-                      radius: 20,
-                      backgroundColor: Color(0xff095CE6),
+          automaticallyImplyLeading: false,
 
-                      ///VAMS logo
-                      backgroundImage: AssetImage(
-                        'images/logo.png',
+          ///Appbar components
+          title: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              children: [
+                Icon(
+                  Icons.arrow_back_ios,
+                  color: Colors.white,
+                ),
+                Text(
+                  'Back',
+                  style: TextStyle(color: Colors.white, fontSize: 17),
+                ),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.5,
+                  child: Center(
+                    child: CircleAvatar(
+                      radius: 22,
+                      backgroundColor: Colors.white,
+                      child: CircleAvatar(
+                        radius: 20,
+                        backgroundColor: Color(0xff095CE6),
+
+                        ///VAMS logo
+                        backgroundImage: AssetImage(
+                          'images/logo.png',
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
+
+          ///Colour and elevation of AppBar
           backgroundColor: Color(0xff095CE6),
           elevation: 0,
         ),
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              Container(
-                ///properties of Container widget
-                padding: EdgeInsets.all(13),
-                color: Color(0xff095CE6),
-
-                ///height is fixed taking 30% of the device screen height
-                height: MediaQuery.of(context).size.height * 0.3,
-
-                ///Contents inside Container arranged in a column fashion
+        body: Column(
+          children: [
+            Container(
+              padding: EdgeInsets.all(12),
+              width: double.infinity,
+              color: Color(0xff095CE6),
+              height: MediaQuery.of(context).size.height * 0.166667,
+              child: Column(
+                ///Elements arranged in a column fashion
+                ///Alignment of contents
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Pet Profile',
+                        style: TextStyle(
+                            color: Color(0xffFDFEFF),
+                            fontWeight: FontWeight.bold,
+                            fontSize: 30),
+                      ),
+                    ],
+                  )
+                ],
+              ),
+            ),
+            Expanded(
+              child: SingleChildScrollView(
+                ///Layout of the Screen using columns and rows
+                ///Scrollable Vertical Layout
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Pet Profile',
-                          style: TextStyle(
-                              color: Color(0xffFDFEFF),
-                              fontWeight: FontWeight.bold,
-                              fontSize: 30),
+                    Container(
+                      margin: EdgeInsets.only(top: 0),
+                      color: Color(0xff095CE6),
+                      width: double.infinity,
+                      padding: EdgeInsets.all(12),
+                      child: CircleAvatar(
+                        radius: 53,
+                        backgroundColor: Colors.white,
+                        child: CircleAvatar(
+                          ///default pet profile avatar
+                          //TODO: Replace the below link with url of pet's image
+                          backgroundImage: NetworkImage(
+                              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdqD5-0_C08PTAunaqPy8_JTOiN0Ckz8fQUA&usqp=CAU'),
+                          backgroundColor: Color(0xffE8E8E8),
+                          radius: 50,
                         ),
-
-                        ///A button to book the appointment with the vet
-                        //TODO: Add functionality of button
-                      ],
+                      ),
                     ),
                     SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.01,
+                      height: 12,
                     ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
+
+                    ///Invoking dropDown Input Buttons
+                    DropDownInputType(),
+                    SizedBox(
+                      height: 12,
+                    ),
+                    Center(
+                      child: Container(
+                        ///Container containing the date fields
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(15),
+                          ),
+                        ),
+                        width: MediaQuery.of(context).size.width * 0.97,
+                        child: Row(
+                          ///elements arranged in row fashioned manner
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: CircleAvatar(
-                                radius: 53,
-                                backgroundColor: Colors.white,
-                                child: CircleAvatar(
-                                  ///default pet profile avatar
-                                  //TODO: Replace the below link with url of pet's image
-                                  backgroundImage: NetworkImage(
-                                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdqD5-0_C08PTAunaqPy8_JTOiN0Ckz8fQUA&usqp=CAU'),
-                                  backgroundColor: Color(0xffE8E8E8),
-                                  radius: 50,
-                                ),
-                              ),
+                            ///Date Input Field classes invoked
+                            DateInput('Date of Birth'),
+                            SizedBox(
+                              width: 2,
                             ),
+                            DateInput('Last Vaccination'),
                           ],
                         ),
-                      ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 12,
+                    ),
+
+                    ///Radio Input Field class invoked
+                    RadioInput(),
+                    SizedBox(
+                      height: 12,
+                    ),
+                    Center(
+                      child: SaveButton(),
+                    ),
+                    SizedBox(
+                      height: 12,
                     ),
                   ],
                 ),
               ),
-              SizedBox(
-                height: 12,
-              ),
-
-              ///Invoking dropDown Input Buttons
-              DropDownInputType(),
-              SizedBox(
-                height: 12,
-              ),
-              Center(
-                child: Container(
-                  ///Container containing the date fields
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(15),
-                    ),
-                  ),
-                  width: MediaQuery.of(context).size.width * 0.97,
-                  child: Row(
-                    ///elements arranged in row fashioned manner
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      ///Date Input Field classes invoked
-                      DateInput('Date of Birth'),
-                      SizedBox(
-                        width: 2,
-                      ),
-                      DateInput('Last Vaccination'),
-                    ],
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: 12,
-              ),
-
-              ///Radio Input Field class invoked
-              RadioInput(),
-              SizedBox(
-                height: 12,
-              ),
-              Center(
-                child: SaveButton(),
-              ),
-              SizedBox(
-                height: 12,
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
