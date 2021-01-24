@@ -47,44 +47,6 @@ class _HomePage1State extends State<HomePage1> {
           SizedBox(
             height: 20,
           ),
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            // child: Padding(
-            //   padding: const EdgeInsets.only(right: 20, left: 20),
-            //   child: Row(
-            //       children: List.generate(menuItems.length, (index) {
-            //     return Padding(
-            //       padding: const EdgeInsets.only(right: 20),
-            //       child: InkWell(
-            //         onTap: () {
-            //           setState(() {
-            //             activeMenu = index;
-            //           });
-            //         },
-            //         child: Container(
-            //           decoration: BoxDecoration(
-            //               border: Border(
-            //                   bottom: BorderSide(
-            //                       color: activeMenu == index
-            //                           ? primary
-            //                           : Colors.transparent,
-            //                       width: 2))),
-            //           child: Padding(
-            //             padding: const EdgeInsets.all(8.0),
-            //             child: Text(
-            //               menuItems[index],
-            //               style: TextStyle(fontSize: 17),
-            //             ),
-            //           ),
-            //         ),
-            //       ),
-            //     );
-            //   })),
-            // ),
-          ),
-          SizedBox(
-            height: 30,
-          ),
           Wrap(
             children: List.generate(dataItems.length, (index) {
               return InkWell(

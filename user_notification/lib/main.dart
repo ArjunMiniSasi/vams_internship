@@ -1,5 +1,7 @@
+///import the required packages and classes
+import 'package:flutter/material.dart';
 import 'user_notif_screen.dart';
-import 'material';
+
 void main() {
   runApp(
     MaterialApp(
