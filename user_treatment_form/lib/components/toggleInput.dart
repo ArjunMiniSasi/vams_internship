@@ -2,12 +2,16 @@
 ///Importing required classes and packages
 
 import 'package:flutter/material.dart';
+import 'package:user_treatment_form/symptomsStorage.dart';
 
 class ToggleInputButtons extends StatefulWidget {
   ///The text to be displayed inside the toggle button
   final String label;
   final double percentage;
-  ToggleInputButtons({this.label, this.percentage});
+
+  ///an object of the Symptoms model class
+  final Symptoms symptoms;
+  ToggleInputButtons({this.label, this.percentage, this.symptoms});
   @override
   _ToggleInputButtonsState createState() => _ToggleInputButtonsState();
 }
@@ -21,6 +25,14 @@ class _ToggleInputButtonsState extends State<ToggleInputButtons> {
       onTap: () {
         setState(() {
           isActive = !isActive;
+
+          ///for selected symptoms they are added to the list of symptoms
+          if (isActive == true)
+            widget.symptoms.add(widget.label);
+
+          ///for unselected symptoms they are removed from the list of symptoms
+          else
+            widget.symptoms.clear(widget.label);
         });
       },
       child: Container(

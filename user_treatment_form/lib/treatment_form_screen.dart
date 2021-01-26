@@ -7,6 +7,7 @@ import 'package:user_treatment_form/components/pictureInput.dart';
 import 'package:user_treatment_form/components/radioInput.dart';
 import 'package:user_treatment_form/components/submitButton.dart';
 import 'package:user_treatment_form/components/toggleInput.dart';
+import 'package:user_treatment_form/symptomsStorage.dart';
 import 'components/textInput.dart';
 
 class TreatmentForm extends StatefulWidget {
@@ -15,6 +16,8 @@ class TreatmentForm extends StatefulWidget {
 }
 
 class _TreatmentFormState extends State<TreatmentForm> {
+  ///creating an object of symptoms model class
+  Symptoms symptoms = Symptoms();
   @override
   Widget build(BuildContext context) {
     ///Arranges the components in a Column Fashion inside a Card
@@ -144,6 +147,7 @@ class _TreatmentFormState extends State<TreatmentForm> {
                         Row(
                           children: [
                             ToggleInputButtons(
+                              symptoms: symptoms,
                               label: 'Vomitting',
                               percentage: 0.23,
                             ),
@@ -151,6 +155,7 @@ class _TreatmentFormState extends State<TreatmentForm> {
                               width: MediaQuery.of(context).size.width * 0.03,
                             ),
                             ToggleInputButtons(
+                              symptoms: symptoms,
                               label: 'Fever',
                               percentage: 0.23,
                             ),
@@ -158,6 +163,7 @@ class _TreatmentFormState extends State<TreatmentForm> {
                               width: MediaQuery.of(context).size.width * 0.03,
                             ),
                             ToggleInputButtons(
+                              symptoms: symptoms,
                               label: 'Injury',
                               percentage: 0.23,
                             ),
@@ -169,6 +175,7 @@ class _TreatmentFormState extends State<TreatmentForm> {
                         Row(
                           children: [
                             ToggleInputButtons(
+                              symptoms: symptoms,
                               label: 'Hair Loss',
                               percentage: 0.23,
                             ),
@@ -176,6 +183,7 @@ class _TreatmentFormState extends State<TreatmentForm> {
                               width: MediaQuery.of(context).size.width * 0.03,
                             ),
                             ToggleInputButtons(
+                              symptoms: symptoms,
                               label: 'Difficulty in Whelping(Giving birth)',
                               percentage: 0.5,
                             ),
@@ -211,23 +219,23 @@ class _TreatmentFormState extends State<TreatmentForm> {
                           plus: '+',
                         ),
                         SizedBox(
-                          width: 15,
+                          width: 8,
                         ),
                         AddPictureBox(
                           plus: '+',
                         ),
                         SizedBox(
-                          width: 15,
+                          width: 8,
                         ),
                         AddPictureBox(
-                          plus: '',
+                          plus: '+',
                         )
                       ],
                     ),
                     SizedBox(
                       height: 20,
                     ),
-                    SubmitButton(),
+                    SubmitButton(symptoms),
                   ],
                 ),
               ),

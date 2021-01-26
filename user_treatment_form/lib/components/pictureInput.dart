@@ -4,39 +4,54 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fdottedline/fdottedline.dart';
+import 'dart:io';
+import 'package:image_picker/image_picker.dart';
 
-class AddPictureBox extends StatelessWidget {
+class AddPictureBox extends StatefulWidget {
   final String plus;
   AddPictureBox({this.plus});
+
+  @override
+  _AddPictureBoxState createState() => _AddPictureBoxState();
+}
+
+class _AddPictureBoxState extends State<AddPictureBox> {
+  File image;
+  String imgPath;
   @override
   Widget build(BuildContext context) {
-    if (plus == '+')
+    if (widget.plus == '+' && image == null)
 
       ///Container without Image
-      return FDottedLine(
-        color: Color(0xFF102DE8),
-        width: 120,
-        height: 100,
-        dottedLength: 2,
-        space: 1,
-        //TODO: add functionality to upload image
-        child: GestureDetector(
-          onTap: () {},
-          child: Container(
-            height: 60,
-            width: 80,
-            child: Center(
-              child: Text(
-                plus,
-                style: TextStyle(
-                  fontSize: 25,
-                  color: Color(0xFF0A36CD),
-                  fontFamily: 'Lato',
+      return Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 3),
+        child: FDottedLine(
+          color: Color(0xFF102DE8),
+          width: 120,
+          height: 100,
+          dottedLength: 2,
+          space: 1,
+          //TODO: add functionality to upload image
+          child: GestureDetector(
+            onTap: () {
+              cameraConnect();
+            },
+            child: Container(
+              height: 60,
+              width: 80,
+              child: Center(
+                child: Text(
+                  widget.plus,
+                  style: TextStyle(
+                    fontSize: 25,
+                    color: Color(0xFF0A36CD),
+                    fontFamily: 'Lato',
+                  ),
                 ),
               ),
-            ),
-            decoration: BoxDecoration(
-              color: Color(0xFFF9FDFF),
+              decoration: BoxDecoration(
+                color: Color(0xFFF9FDFF),
+              ),
             ),
           ),
         ),
@@ -50,9 +65,8 @@ class AddPictureBox extends StatelessWidget {
             margin: EdgeInsets.only(top: 3.0, right: 6.5),
             height: 60,
             width: 80,
-            child: Image(
-              image: NetworkImage(
-                  'https://cdn.shopify.com/s/files/1/0810/5967/files/lab_retriever_large.jpg?v=1490212755'),
+            child: Image.file(
+              image,
               fit: BoxFit.cover,
             ),
             decoration: BoxDecoration(
@@ -67,7 +81,11 @@ class AddPictureBox extends StatelessWidget {
             right: 0.0,
             top: 0.0,
             child: GestureDetector(
-              onTap: () {},
+              onTap: () {
+                setState(() {
+                  image = null;
+                });
+              },
               child: Align(
                 alignment: Alignment.topRight,
                 child: CircleAvatar(
@@ -86,5 +104,17 @@ class AddPictureBox extends StatelessWidget {
           )
         ],
       );
+  }
+
+  ///Function to capture image to display
+  cameraConnect() async {
+    ///an image is clicked using camera
+    final pickedFile = await ImagePicker().getImage(
+      source: ImageSource.camera,
+    );
+    if (pickedFile != null) {
+      image = File(pickedFile.path);
+      setState(() {});
+    }
   }
 }
